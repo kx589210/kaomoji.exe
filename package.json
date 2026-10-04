@@ -1,0 +1,46 @@
+{
+  "name": "kaomoji.exe",
+  "version": "1.0.0",
+  "description": "A 100.8-second motion-design film made entirely of code: every frame and every sound is generated, no images, no samples.",
+  "license": "MIT",
+  "author": "kx589210",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "music": "node scripts/audio/bgm.mjs",
+    "studio": "remotion studio",
+    "render": "node scripts/render.mjs --comp KaomojiExe --name kaomoji-exe --audio audio/bgm.wav --scale 2",
+    "render:preview": "node scripts/render.mjs --comp KaomojiExe --name kaomoji-exe-preview --audio audio/bgm.wav --scale 1 --draft",
+    "test": "node --test \"tests/**/*.test.*\"",
+    "typecheck": "tsc -p tsconfig.json",
+    "lint": "eslint src",
+    "check-glyphs": "node scripts/check-glyphs.mjs",
+    "check-pacing": "node scripts/check-pacing.mjs",
+    "fonts": "node scripts/fetch-fonts.mjs"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.8.1",
+    "@remotion/bundler": "4.0.529",
+    "@remotion/cli": "4.0.529",
+    "@remotion/media": "4.0.529",
+    "@remotion/renderer": "4.0.529",
+    "@remotion/three": "4.0.529",
+    "opentype.js": "2.0.0",
+    "postprocessing": "6.39.5",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.529",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.529",
+    "@types/node": "24.19.0",
+    "@types/react": "19.2.7",
+    "@types/three": "0.186.0",
+    "eslint": "9.19.0",
+    "typescript": "5.9.3"
+  }
+}
